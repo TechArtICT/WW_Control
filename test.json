@@ -1,0 +1,120 @@
+{
+	"modes": [
+		{
+			"mode": "rain with thunder and lightning",
+			"minInstances": 25,
+			"maxInstances": 25,
+			"sounds": {
+				"rain": {
+					"file": "rain.wav",
+					"probability": 0.99
+				},
+				"thunderWithRain": {
+					"file": "thunder.wav",
+					"probability": 0.01
+				}
+			}
+		},
+		{
+			"mode": "gregorian chant",
+			"minInstances": 10,
+			"maxInstances": 20,
+			"sounds": {
+				"long": {
+					"file": "long.wav",
+					"probability": 0.50,
+					"pitch shift": [
+						-4,
+						-3,
+						-2,
+						-1,
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"chorusing": [
+						3
+					],
+					"fadeIn": 0.25,
+					"fadeOut": 0.5,
+					"comment": "what if we get rid of all these effects and instead have a bunch of files and have all this prebaked into the sounds already?"
+				},
+				"short": {
+					"file": "short.wav",
+					"probability": 0.50,
+					"pitch shift": [
+						-4,
+						-3,
+						-2,
+						-1,
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"chorusing": [
+						3
+					],
+					"fadeOut": 0.25
+				}
+			}
+		},
+		{
+			"mode": "oneBee",
+			"minInstances": 2,
+			"maxInstances": 4,
+			"sounds": {
+				"bee": {
+					"file": "bee.wav",
+					"probability": 1,
+					"shiftSpeed": [
+						1,
+						10,
+						100
+					]
+				}
+			}
+		},
+		{
+			"mode": "city and traffic",
+			"minInstances": 10,
+			"maxInstances": 20,
+			"sounds": {
+				"horn": {
+					"file": "horn.wav",
+					"probability": 0.1
+				},
+				"car1": {
+					"file": "car1.wav",
+					"probability": 0.3,
+					"shiftSpeed": [
+						1,
+						5,
+						10
+					]
+				},
+				"car2": {
+					"file": "car2.wav",
+					"probability": 0.3,
+					"shiftSpeed": [
+						1,
+						5,
+						10
+					]
+				},
+				"truck": {
+					"file": "truck.wav",
+					"probability": 0.3,
+					"shiftSpeed": [
+						1,
+						5,
+						10
+					]
+				}
+			}
+		}
+	]
+}
