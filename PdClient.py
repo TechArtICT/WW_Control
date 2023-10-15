@@ -2,50 +2,81 @@ import json, time, random
 from twisted.internet import task
 from twisted.internet import reactor
 from twisted.internet.protocol import Protocol, ReconnectingClientFactory
+
+import sharedData
 from test import *
 
+
 class PdClient(Protocol):
+    global numInstancesForMode
 
     def __init__(self, instanceNumber=None):
         self.instanceNumber = instanceNumber
 
+    def chooseSoundForPdToPlay(self):
+        soundDict = sharedData.modes[sharedData.mode]["sounds"]
+        probGen = random.randint(0, 100) / 100
+        probSum = 0
+
+        for i in soundDict.keys():
+            probOfSound = soundDict[i]["probability"]
+            if probOfSound + probSum >= probGen:
+                return soundDict[i]["file"]
+            probSum += probOfSound
+
+    def givePdSomethingToDo(self):
+        global numInstancesForMode
+
+        # Mark instance not active
+        sharedData.PdActive[self.instanceNumber] = 0
+
+        if sharedData.numInstancesForMode > sum(sharedData.PdActive):
+            print("get instance to play")
+            sound = self.chooseSoundForPdToPlay()
+            stringToSend = "play " + sound + ";\n"
+            print("stringToSend: ", stringToSend)
+            self.transport.write(stringToSend.encode("ascii"))
+            sharedData.PdActive[self.instanceNumber] = 1
+
     def dataReceived(self, data):
-        
-        global numPdInstances
-        
         # need to parse data here. There could be more than one message
         # x = f'{self.quote}  {str(data[:-1])}'
-        x = (data.strip(b"\n"))
+        x = data.strip(b"\n")
         y = x.split(b";")
         for z in y:
-            if z == b'':
+            if z == b"":
                 break
             print(z)
             if z == b"got anything?":
+                self.givePdSomethingToDo()
                 print("yes")
+            else:
+                self.transport.write("nope".encode("ascii"))
+
         print("done")
-        two = str(numPdInstances)+";\n"
-        print(numPdInstances)
-        self.transport.write(two.encode('ascii'))    
-        
+
+
 class PdClientFactory(ReconnectingClientFactory):
-    def __init__(self, quote=None):
-        self.quote = quote
+    maxDelay = 2  # Maximum delay between connection attempts (in seconds)
+    factor = 1.5  # Factor by which the delay increases after each attempt
+
+    def __init__(self, instanceNum=None):
+        self.instanceNum = instanceNum
 
     def startedConnecting(self, connector):
-        print('Starting to connect.')
+        # print("Starting to connect.")
+        pass
 
     def buildProtocol(self, addr):
-        print('Connected.')
-        print('Resetting reconnection delay')
+        print("Connected.")
+        print("Resetting reconnection delay")
         self.resetDelay()
-        return PdClient(self.quote)
+        return PdClient(self.instanceNum)
 
     def clientConnectionLost(self, connector, reason):
-        print('Lost connection.  Reason:', reason)
+        print("Lost connection.  Reason:", reason)
         ReconnectingClientFactory.clientConnectionLost(self, connector, reason)
 
     def clientConnectionFailed(self, connector, reason):
-        print('Connection failed. Reason:', reason)
-        ReconnectingClientFactory.clientConnectionFailed(self, connector,
-                                                         reason)
+        # print("Connection failed. Reason:", reason)
+        ReconnectingClientFactory.clientConnectionFailed(self, connector, reason)
