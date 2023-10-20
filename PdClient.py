@@ -12,6 +12,7 @@ class PdClient(Protocol):
 
     def __init__(self, instanceNumber=None):
         self.instanceNumber = instanceNumber
+        self.timeToNextInstance = 0
 
     def chooseSoundForPdToPlay(self):
         soundDict = sharedData.modes[sharedData.mode]["sounds"]
@@ -30,13 +31,22 @@ class PdClient(Protocol):
         # Mark instance not active
         sharedData.PdActive[self.instanceNumber] = 0
 
-        if sharedData.numInstancesForMode > sum(sharedData.PdActive):
+        if (
+            sharedData.numInstancesForMode > sum(sharedData.PdActive)
+            and int(time.time() * 1000) >= self.timeToNextInstance
+        ):
             print("get instance to play")
             sound = self.chooseSoundForPdToPlay()
             stringToSend = "play " + sound + ";\n"
             print("stringToSend: ", stringToSend)
             self.transport.write(stringToSend.encode("ascii"))
             sharedData.PdActive[self.instanceNumber] = 1
+            self.timeToNextInstance = random.randint(
+                sharedData.modes[sharedData.mode]["minMsToNextInstance"]
+                + int(time.time() * 1000),
+                sharedData.modes[sharedData.mode]["maxMsToNextInstance"]
+                + int(time.time() * 1000),
+            )
 
     def dataReceived(self, data):
         # need to parse data here. There could be more than one message

@@ -1,4 +1,5 @@
-numPdInstances = 2
+activeTrees=[3]
+numPdInstances = len(activeTrees)
 numSecsToNextMode = 5
 
 numInstancesForMode = 0

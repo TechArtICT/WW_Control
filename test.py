@@ -3,42 +3,41 @@ from twisted.internet import task
 from twisted.internet import reactor
 from twisted.internet.protocol import Protocol, ReconnectingClientFactory
 
+import sharedData
 from PdClient import *
 
 
-numPdInstances = 2
-PdActive = [0] * numPdInstances
-numSecsToNextMode = 60
-mode = 0
-
-def generateNewMode(mode):
-    global modes
-    
-    newMode = mode
-    while (newMode == mode):
-        newMode = random.randint(0,len(modes)-1)
+def generateNewMode():
+    newMode = sharedData.mode
+    while newMode == sharedData.mode:
+        newMode = random.randint(0, len(sharedData.modes) - 1)
+        if len(sharedData.modes) == 1:
+            break
+    sharedData.numInstancesForMode = random.choice(
+        range(
+            sharedData.modes[newMode]["minInstances"],
+            sharedData.modes[newMode]["maxInstances"] + 1,
+        )
+    )
+    print("new mode: ", sharedData.modes[newMode]["mode"])
     return newMode
 
-f = open('test.json',)
-data = json.load(f)
-modes = data['modes']
-startTime = time.time() - 60
 
 def runEverySecond():
     """
     Called at every loop interval.
     """
-    global startTime, mode
-    
-    if startTime + numSecsToNextMode <= time.time():
-            mode = generateNewMode(mode)
-            print("new mode ", mode)
-            startTime = time.time()
+    global startTime
+
+    if startTime + sharedData.numSecsToNextMode <= time.time():
+        sharedData.mode = generateNewMode()
+        startTime = time.time()
     return
 
     # We looped enough times.
     loop.stop()
     return
+
 
 def ebLoopFailed(failure):
     """
@@ -46,19 +45,21 @@ def ebLoopFailed(failure):
     """
     print(failure.getBriefTraceback())
     reactor.stop()
-    
-if __name__ == "__main__":
-    
-    for i in range(numPdInstances):
-        reactor.connectTCP("localhost", 3001 + i, PdClientFactory(3001 + i))
 
-    print("starting looping call")
+
+if __name__ == "__main__":
+    f = open(
+        "test3.json",
+    )
+    data = json.load(f)
+    sharedData.modes = data["modes"]
+    startTime = time.time() - sharedData.numSecsToNextMode
+
+    for i in range(sharedData.numPdInstances):
+        port = 3000 + sharedData.activeTrees[i]
+        reactor.connectTCP("localhost", port, PdClientFactory(i))
     loop = task.LoopingCall(runEverySecond)
     loopDeferred = loop.start(1.0)
     loopDeferred.addErrback(ebLoopFailed)
 
     reactor.run()
-    
-    print("I don't think I'll see this")   
-    # while True:
-  

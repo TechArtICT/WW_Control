@@ -1,0 +1,21 @@
+{
+	"modes": [
+		{
+			"mode": "rain with thunder and lightning",
+			"minInstances": 25,
+			"maxInstances": 25,
+			"minMsToNextInstance": 100,
+			"maxMsToNextInstance": 1000,
+			"sounds": {
+				"rain": {
+					"file": "rain.wav",
+					"probability": 0.50
+				},
+				"thunderWithRain": {
+					"file": "thunder.wav",
+					"probability": 0.50
+				}
+			}
+		}
+    ]
+}
