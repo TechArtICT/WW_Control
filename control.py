@@ -1,4 +1,5 @@
-import json, time, random
+import json, time, random, argparse
+
 from twisted.internet import task
 from twisted.internet import reactor
 from twisted.internet.protocol import Protocol, ReconnectingClientFactory
@@ -8,9 +9,22 @@ from PdClient import *
 
 
 def generateNewMode():
+    global modeToUse
+    
     newMode = sharedData.mode
     while newMode == sharedData.mode:
-        newMode = random.randint(0, len(sharedData.modes) - 1)
+        if modeToUse == "All":
+            newMode = random.randint(0, len(sharedData.modes) - 1)
+        else:
+            gotMode = False
+            for i in range(len(sharedData.modes)):
+                if sharedData.modes[i]["mode"] == modeToUse:
+                    newMode = i
+                    gotMode = True
+                    break
+            if not gotMode:
+                raise IndexError("no such mode: " + modeToUse)
+            break
         if len(sharedData.modes) == 1:
             break
     sharedData.numInstancesForMode = random.choice(
@@ -48,8 +62,17 @@ def ebLoopFailed(failure):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        prog="control",
+        description="Control audio/leds/Beagleboards for Whispering Woodlands project",
+    )
+    parser.add_argument("jsonfile")
+    parser.add_argument("-m", "--mode", default="All")
+    args = parser.parse_args()
+    modeToUse = args.mode
+
     f = open(
-        "test3.json",
+        args.jsonfile,
     )
     data = json.load(f)
     sharedData.modes = data["modes"]

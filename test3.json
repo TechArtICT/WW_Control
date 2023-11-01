@@ -1,7 +1,7 @@
 {
 	"modes": [
 		{
-			"mode": "rain with thunder and lightning",
+			"mode": "rain",
 			"minInstances": 25,
 			"maxInstances": 25,
 			"minMsToNextInstance": 100,
@@ -16,6 +16,48 @@
 					"probability": 0.50
 				}
 			}
+		},
+		{
+			"mode": "chant1",
+			"minInstances": 15,
+			"maxInstances": 20,
+			"minMsToNextInstance": 500,
+			"maxMsToNextInstance": 4000,
+			"sounds": {
+				"D": {
+					"file": "chant1inD.wav",
+					"probability": 0.40
+				},
+				"F#": {
+					"file": "chant1inF#.wav",
+					"probability": 0.15
+				},
+				"G": {
+					"file": "chant1inG.wav",
+					"probability": 0.15
+				},
+				"A": {
+					"file": "chant1inA.wav",
+					"probability": 0.15
+				},
+				"C": {
+					"file": "chant1inC.wav",
+					"probability": 0.15
+				}
+			}
+		},
+		{
+			"mode": "rainTest",
+			"minInstances": 25,
+			"maxInstances": 25,
+			"minMsToNextInstance": 100,
+			"maxMsToNextInstance": 1000,
+			"sounds": {
+				"rain": {
+					"file": "rainTest.wav",
+					"probability": 1.00
+				}
+			}
 		}
-    ]
+	]
 }

@@ -4,7 +4,7 @@ from twisted.internet import reactor
 from twisted.internet.protocol import Protocol, ReconnectingClientFactory
 
 import sharedData
-from test import *
+from control import *
 
 
 class PdClient(Protocol):
@@ -37,7 +37,8 @@ class PdClient(Protocol):
         ):
             print("get instance to play")
             sound = self.chooseSoundForPdToPlay()
-            stringToSend = "play " + sound + ";\n"
+            path = sharedData.modes[sharedData.mode]["mode"]
+            stringToSend = "play " + path + "/" + sound + ";\n"
             print("stringToSend: ", stringToSend)
             self.transport.write(stringToSend.encode("ascii"))
             sharedData.PdActive[self.instanceNumber] = 1
