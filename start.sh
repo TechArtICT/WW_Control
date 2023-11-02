@@ -4,6 +4,7 @@ activeTrees=(3)
 numTrees=${#activeTrees[@]}
 pythonDir="/home/ww/projects/whispering/mainControl"
 test="true"
+testPdSend="false"
 jsonFile="test3.json"
 
 if [ "X$1" == "X" ];
@@ -46,7 +47,12 @@ for i in ${activeTrees[@]}; do
     ledport=60$port
     if [ "`jack_lsp | grep puredata$i | wc -l`" == "0" ];
     then
-        pd -jack -callback -jackname puredata$i -nojackconnect -inchannels 0 -outchannels 1 -send "pyPort $pyport" -send "port4LEDs $ledport" pdServers/playerServer.pd &
+	if [ "$testPdSend" == "true" ];
+	then
+	    pd -jack -callback -jackname puredata$i -nojackconnect -inchannels 0 -outchannels 1 -send "pyPort $pyport" -send "port4LEDs $ledport" -send "port4LEDsTest $ledport" pdServers/playerServer.pd &
+	else
+	    pd -jack -callback -jackname puredata$i -nojackconnect -inchannels 0 -outchannels 1 -send "pyPort $pyport" -send "port4LEDs $ledport" pdServers/playerServer.pd &
+	fi
     fi
     if [ "$test" != "true" ];
     then
