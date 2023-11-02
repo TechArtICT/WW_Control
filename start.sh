@@ -5,7 +5,7 @@ numTrees=${#activeTrees[@]}
 pythonDir="/home/ww/projects/whispering/mainControl"
 test="true"
 testPdSend="false"
-jsonFile="test3.json"
+jsonFile="allTheModes.json"
 
 if [ "X$1" == "X" ];
 then
