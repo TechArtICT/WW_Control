@@ -1,0 +1,17 @@
+{
+	"modes": [
+		{
+			"mode": "rainTest",
+			"minInstances": 25,
+			"maxInstances": 25,
+			"minMsToNextInstance": 100,
+			"maxMsToNextInstance": 1000,
+			"sounds": {
+				"rain": {
+					"file": "rainTest.wav",
+					"probability": 1.00
+				}
+			}
+		}
+	]
+}

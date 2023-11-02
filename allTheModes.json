@@ -1,0 +1,87 @@
+{
+	"modes": [
+		{
+			"mode": "rain",
+			"minInstances": 25,
+			"maxInstances": 25,
+			"minMsToNextInstance": 100,
+			"maxMsToNextInstance": 1000,
+			"sounds": {
+				"rain": {
+					"file": "rain.wav",
+					"probability": 0.50
+				},
+				"thunderWithRain": {
+					"file": "thunder.wav",
+					"probability": 0.50
+				}
+			}
+		},
+		{
+			"mode": "chant1",
+			"minInstances": 15,
+			"maxInstances": 20,
+			"minMsToNextInstance": 500,
+			"maxMsToNextInstance": 4000,
+			"sounds": {
+				"D": {
+					"file": "chant1inD.wav",
+					"probability": 0.40
+				},
+				"F#": {
+					"file": "chant1inF#.wav",
+					"probability": 0.15
+				},
+				"G": {
+					"file": "chant1inG.wav",
+					"probability": 0.15
+				},
+				"A": {
+					"file": "chant1inA.wav",
+					"probability": 0.15
+				},
+				"C": {
+					"file": "chant1inC.wav",
+					"probability": 0.15
+				}
+			}
+		},
+		{
+			"mode": "spaceLong",
+			"minInstances": 10,
+			"maxInstances": 20,
+			"minMsToNextInstance": 100,
+			"maxMsToNextInstance": 1000,
+			"sounds": {
+				"ambience2": {
+					"file": "20190601_space_warning_gun_ambience-28929 2.wav",
+					"probability": 14
+				},
+				"ambience1": {
+					"file": "20190601_space_warning_gun_ambience-28929.wav",
+					"probability": 14
+				},
+				"powerCharge": {
+					"file": "power_charge.wav",
+					"probability": 14
+				},
+				"pulsePitchUp": {
+					"file": "pulse_pitch_up.wav",
+					"probability": 14
+				},
+				"sciFiCharge": {
+					"file": "sci_fi_charge.wav",
+					"probability": 14
+				},
+				"skyBlaze": {
+					"file": "skyblaze.wav",
+					"probability": 15
+				},
+				"warp": {
+					"file": "warp.wav",
+					"probability": 15
+				}
+			}
+		}
+	]
+}
