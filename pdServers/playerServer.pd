@@ -1,4 +1,4 @@
-#N canvas 961 121 709 852 12;
+#N canvas 1087 121 709 852 12;
 #X floatatom 321 328 5 0 0 0 - - - 0;
 #X msg 194 214 send got anything?;
 #X obj 194 272 netreceive 3001;

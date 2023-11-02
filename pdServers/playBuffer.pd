@@ -1,4 +1,4 @@
-#N canvas 182 125 1056 771 12;
+#N canvas 12 108 1056 771 12;
 #X obj 767 354 outlet;
 #X obj 361 173 soundfiler;
 #X obj 331 474 line~;

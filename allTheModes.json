@@ -54,32 +54,203 @@
 			"maxMsToNextInstance": 1000,
 			"sounds": {
 				"ambience2": {
-					"file": "20190601_space_warning_gun_ambience-28929 2.wav",
-					"probability": 14
+					"file": "20190601_space_warning_gun_ambience-28929_2.wav",
+					"probability": 0.14
 				},
 				"ambience1": {
 					"file": "20190601_space_warning_gun_ambience-28929.wav",
-					"probability": 14
+					"probability": 0.14
 				},
 				"powerCharge": {
 					"file": "power_charge.wav",
-					"probability": 14
+					"probability": 0.14
 				},
 				"pulsePitchUp": {
 					"file": "pulse_pitch_up.wav",
-					"probability": 14
+					"probability": 0.14
 				},
 				"sciFiCharge": {
 					"file": "sci_fi_charge.wav",
-					"probability": 14
+					"probability": 0.14
 				},
 				"skyBlaze": {
 					"file": "skyblaze.wav",
-					"probability": 15
+					"probability": 0.15
 				},
 				"warp": {
 					"file": "warp.wav",
-					"probability": 15
+					"probability": 0.15
+				}
+			}
+		},
+		{
+			"mode": "laserFire",
+			"minInstances": 10,
+			"maxInstances": 20,
+			"minMsToNextInstance": 50,
+			"maxMsToNextInstance": 100,
+			"sounds": {
+				"slinky": {
+					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
+					"probability": 0.07
+				},
+				"analogLazer": {
+					"file": "analog-lazer-fx-87122.wav",
+					"probability": 0.07
+				},
+				"blasters": {
+					"file": "blasters-85815.wav",
+					"probability": 0.07
+				},
+				"boomerang": {
+					"file": "boomerang-128276.wav",
+					"probability": 0.07
+				},
+				"edmLaser": {
+					"file": "edm-laser-140951.wav",
+					"probability": 0.07
+				},
+				"heavyBeam": {
+					"file": "heavy-beam-weapon-7052.wav",
+					"probability": 0.07
+				},
+				"laserCannon": {
+					"file": "laser-cannon-science-fiction-sound-9831.wav",
+					"probability": 0.07
+				},
+				"laserFalling": {
+					"file": "laser_falling-104772.wav",
+					"probability": 0.07
+				},
+				"laserGun": {
+					"file": "laser-gun-72558.wav",
+					"probability": 0.07
+				},
+				"laserGun2": {
+					"file": "laser-gun-81720.wav",
+					"probability": 0.07
+				},
+				"whoosh": {
+					"file": "laser-whoosh-37530.wav",
+					"probability": 0.07
+				},
+				"powerDown": {
+					"file": "power-down-7103.wav",
+					"probability": 0.07
+				},
+				"robotTank": {
+					"file": "robot-tank-34600.wav",
+					"probability": 0.08
+				},
+				"shoot02": {
+					"file": "shoot02wav-14562.wav",
+					"probability": 0.08
+				}
+			}
+		},
+		{
+			"mode": "spaceLaser",
+			"minInstances": 20,
+			"maxInstances": 25,
+			"minMsToNextInstance": 50,
+			"maxMsToNextInstance": 100,
+			"sounds": {
+				"slinky": {
+					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
+					"probability": 0.05
+				},
+				"analogLazer": {
+					"file": "analog-lazer-fx-87122.wav",
+					"probability": 0.05
+				},
+				"blasters": {
+					"file": "blasters-85815.wav",
+					"probability": 0.05
+				},
+				"boomerang": {
+					"file": "boomerang-128276.wav",
+					"probability": 0.05
+				},
+				"edmLaser": {
+					"file": "edm-laser-140951.wav",
+					"probability": 0.05
+				},
+				"heavyBeam": {
+					"file": "heavy-beam-weapon-7052.wav",
+					"probability": 0.05
+				},
+				"laserCannon": {
+					"file": "laser-cannon-science-fiction-sound-9831.wav",
+					"probability": 0.05
+				},
+				"laserFalling": {
+					"file": "laser_falling-104772.wav",
+					"probability": 0.05
+				},
+				"laserGun": {
+					"file": "laser-gun-72558.wav",
+					"probability": 0.05
+				},
+				"laserGun2": {
+					"file": "laser-gun-81720.wav",
+					"probability": 0.05
+				},
+				"whoosh": {
+					"file": "laser-whoosh-37530.wav",
+					"probability": 0.05
+				},
+				"powerDown": {
+					"file": "power-down-7103.wav",
+					"probability": 0.05
+				},
+				"robotTank": {
+					"file": "robot-tank-34600.wav",
+					"probability": 0.05
+				},
+				"shoot02": {
+					"file": "shoot02wav-14562.wav",
+					"probability": 0.05
+				},
+				"ambience2": {
+					"file": "20190601_space_warning_gun_ambience-28929_2.wav",
+					"probability": 0.05
+				},
+				"ambience1": {
+					"file": "20190601_space_warning_gun_ambience-28929.wav",
+					"probability": 0.05
+				},
+				"powerCharge": {
+					"file": "power_charge.wav",
+					"probability": 0.04
+				},
+				"pulsePitchUp": {
+					"file": "pulse_pitch_up.wav",
+					"probability": 0.04
+				},
+				"sciFiCharge": {
+					"file": "sci_fi_charge.wav",
+					"probability": 0.04
+				},
+				"skyBlaze": {
+					"file": "skyblaze.wav",
+					"probability": 0.04
+				},
+				"warp": {
+					"file": "warp.wav",
+					"probability": 0.04
+				}
+			}
+		},
+		{
+			"mode": "spaceLaserTest",
+			"minInstances": 20,
+			"maxInstances": 25,
+			"minMsToNextInstance": 50,
+			"maxMsToNextInstance": 100,
+			"sounds": {
+				"slinky": {
+					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
+					"probability": 1
 				}
 			}
 		}
