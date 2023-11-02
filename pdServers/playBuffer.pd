@@ -1,4 +1,4 @@
-#N canvas 432 101 1056 771 12;
+#N canvas 182 125 1056 771 12;
 #X obj 767 354 outlet;
 #X obj 361 173 soundfiler;
 #X obj 331 474 line~;
@@ -33,6 +33,8 @@
 #X obj 767 216 r \$0-fileLenMS;
 #X obj 598 190 r \$0-fileLenMS;
 #X obj 396 269 s \$0-fileLenMS;
+#X obj 771 424 r \$0-fileLenMS;
+#X obj 771 450 s fileLenMS;
 #X connect 1 0 8 0;
 #X connect 2 0 15 0;
 #X connect 3 0 2 0;
@@ -66,3 +68,4 @@
 #X connect 30 1 28 0;
 #X connect 31 0 29 0;
 #X connect 32 0 26 0;
+#X connect 34 0 35 0;

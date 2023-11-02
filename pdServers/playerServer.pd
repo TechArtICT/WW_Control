@@ -1,4 +1,4 @@
-#N canvas 1145 1201 709 852 12;
+#N canvas 961 121 709 852 12;
 #X floatatom 321 328 5 0 0 0 - - - 0;
 #X msg 194 214 send got anything?;
 #X obj 194 272 netreceive 3001;
@@ -42,7 +42,7 @@
 #X obj 302 38 t b b;
 #X text 415 99 <- no response;
 #X obj 427 202 print;
-#N canvas 243 1221 656 646 sendToLEDs 1;
+#N canvas 1264 243 656 646 sendToLEDs 1;
 #X msg 270 192 listen \$1;
 #X obj 270 158 r port4LEDs;
 #X obj 270 227 netreceive;
@@ -82,8 +82,9 @@
 #X obj 369 484 t a b;
 #X msg 164 45 0;
 #X obj 194 328 t b a a b;
-#X obj 146 632 print 1;
-#X obj 513 632 print 2;
+#X obj 463 19 netreceive 8000;
+#X obj 491 152 print ns;
+#X obj 482 60 route volume;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 0 0;
@@ -91,9 +92,7 @@
 #X connect 3 0 51 0;
 #X connect 3 1 40 0;
 #X connect 5 0 48 0;
-#X connect 5 0 52 0;
 #X connect 6 0 49 0;
-#X connect 6 0 53 0;
 #X connect 7 0 12 0;
 #X connect 7 1 8 0;
 #X connect 9 0 31 0;
@@ -144,3 +143,5 @@
 #X connect 51 1 5 0;
 #X connect 51 2 44 0;
 #X connect 51 3 27 0;
+#X connect 52 0 54 0;
+#X connect 54 0 21 0;
