@@ -1,4 +1,4 @@
-#N canvas 1087 121 709 852 12;
+#N canvas 891 0 709 793 12;
 #X floatatom 321 328 5 0 0 0 - - - 0;
 #X msg 194 214 send got anything?;
 #X obj 194 272 netreceive 3001;
@@ -20,7 +20,8 @@
 #X obj 393 656 line~;
 #X msg 395 625 \$1 100;
 #X obj 334 750 +~;
-#X obj 605 77 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 605 77 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X obj 601 224 s vol;
 #X obj 594 21 loadbang;
 #X msg 606 51 0.5;
@@ -53,7 +54,8 @@
 #X floatatom 337 256 5 0 0 0 - - - 0;
 #X msg 104 195 send amplitude \$1;
 #X obj 104 163 r amplitude;
-#X obj 387 359 cnv 20 170 200 empty empty empty 20 12 0 12 #ffe3c6 #404040 0;
+#X obj 387 359 cnv 20 170 200 empty empty empty 20 12 0 12 #ffe3c6
+#404040 0;
 #X obj 398 491 netsend;
 #X obj 444 538 print recv;
 #X obj 398 431 pipe 100;
@@ -61,7 +63,8 @@
 #X obj 398 406 r port4LEDsTest;
 #X text 429 360 FOR TESTING;
 #X obj 444 515 spigot 1;
-#X obj 496 489 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 496 489 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 0 1;
 #X obj 483 378 loadbang;
 #X msg 496 433 1;
 #X connect 0 0 2 0;
@@ -90,9 +93,11 @@
 #X obj 369 484 t a b;
 #X msg 164 45 0;
 #X obj 194 328 t b a a b;
-#X obj 463 19 netreceive 8000;
 #X obj 491 152 print ns;
 #X obj 482 60 route volume;
+#X msg 412 11 connect localhost 8000;
+#X obj 467 36 netsend;
+#X obj 305 9 loadbang;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 0 0;
@@ -151,5 +156,7 @@
 #X connect 51 1 5 0;
 #X connect 51 2 44 0;
 #X connect 51 3 27 0;
-#X connect 52 0 54 0;
-#X connect 54 0 21 0;
+#X connect 53 0 21 0;
+#X connect 54 0 55 0;
+#X connect 55 1 53 0;
+#X connect 56 0 54 0;

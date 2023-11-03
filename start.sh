@@ -1,9 +1,9 @@
 #!/bin/bash
 #separate numbers in array with spaces, not commas:
-activeTrees=(3)
+activeTrees=(2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
 numTrees=${#activeTrees[@]}
 pythonDir="/home/ww/projects/whispering/mainControl"
-test="true"
+test="false"
 testPdSend="false"
 jsonFile="allTheModes.json"
 

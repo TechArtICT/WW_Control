@@ -1,12 +1,9 @@
-#N canvas 372 605 450 300 12;
-#X obj 195 99 netsend;
-#X msg 195 50 connect localhost 8000;
+#N canvas 372 493 450 300 12;
 #X msg 195 76 send volume \$1;
-#X obj 366 19 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 366 19 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
+#000000 #000000 0 1;
 #X floatatom 365 202 5 0 0 0 - - - 0;
-#X obj 195 22 loadbang;
+#X obj 195 99 netreceive 8000;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
 #X connect 1 0 0 0;
-#X connect 2 0 0 0;
-#X connect 3 0 4 0;
-#X connect 3 0 2 0;
-#X connect 5 0 1 0;
