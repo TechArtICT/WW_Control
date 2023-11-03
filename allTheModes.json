@@ -6,6 +6,7 @@
 			"maxInstances": 25,
 			"minMsToNextInstance": 100,
 			"maxMsToNextInstance": 1000,
+			"volume": 1.0,
 			"sounds": {
 				"rain": {
 					"file": "rain.wav",
@@ -23,6 +24,7 @@
 			"maxInstances": 20,
 			"minMsToNextInstance": 500,
 			"maxMsToNextInstance": 4000,
+			"volume": 1.0,
 			"sounds": {
 				"D": {
 					"file": "chant1inD.wav",
@@ -52,6 +54,7 @@
 			"maxInstances": 20,
 			"minMsToNextInstance": 100,
 			"maxMsToNextInstance": 1000,
+			"volume": 1.0,
 			"sounds": {
 				"ambience2": {
 					"file": "20190601_space_warning_gun_ambience-28929_2.wav",
@@ -89,6 +92,7 @@
 			"maxInstances": 20,
 			"minMsToNextInstance": 50,
 			"maxMsToNextInstance": 100,
+			"volume": 1.0,
 			"sounds": {
 				"slinky": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
@@ -154,6 +158,7 @@
 			"maxInstances": 25,
 			"minMsToNextInstance": 50,
 			"maxMsToNextInstance": 100,
+			"volume": 1.0,
 			"sounds": {
 				"slinky": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
@@ -247,6 +252,7 @@
 			"maxInstances": 25,
 			"minMsToNextInstance": 50,
 			"maxMsToNextInstance": 100,
+			"volume": 1.0,
 			"sounds": {
 				"slinky": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
