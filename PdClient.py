@@ -38,7 +38,7 @@ class PdClient(Protocol):
             print("get instance to play")
             sound = self.chooseSoundForPdToPlay()
             path = sharedData.modes[sharedData.mode]["mode"]
-            stringToSend = "play " + path + "/" + sound + ";\n"
+            stringToSend = "play " + path + "/" + sound + " " + str(sharedData.modes[sharedData.mode]["volume"]) + ";\n"
             print("stringToSend: ", stringToSend)
             self.transport.write(stringToSend.encode("ascii"))
             sharedData.PdActive[self.instanceNumber] = 1
