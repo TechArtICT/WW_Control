@@ -1,6 +1,7 @@
 #!/bin/bash
 #separate numbers in array with spaces, not commas:
-activeTrees=(2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
+# activeTrees=(2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
+activeTrees=(15)
 numTrees=${#activeTrees[@]}
 pythonDir="/home/ww/projects/whispering/mainControl"
 test="false"
@@ -51,14 +52,7 @@ for i in ${activeTrees[@]}; do
         fi
     fi
     if [ "$test" != "true" ]; then
-        if [ "$(jack_lsp | grep zita$i | wc -l)" == "0" ]; then
-            zita-j2n 10.42.0.$i $zyport --16bit --chan 1 --jname zita$i &
-        fi
-        while [ "$(jack_lsp | grep puredata$i | wc -l)" == "0" ]; do
-            echo "waiting for Pd instance to come up"
-            sleep 1
-        done
-        jack_connect puredata$i:output_1 zita$i:in_1
+        ./monitor.sh $i $zyport
     fi
 done
 
