@@ -94,71 +94,71 @@
 			"maxMsToNextInstance": 100,
 			"volume": 1.0,
 			"sounds": {
-				"slinky": {
+				"slinky-new": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
 					"probability": 0.08
 				},
-				"analog-lazer": {
+				"analog-lazer-new": {
 					"file": "analog-lazer-fx-87122.wav",
 					"probability": 0.08
 				},
-				"blaster1": {
+				"blaster1-new": {
 					"file": "blaster1.wav",
 					"probability": 0.08
 				},
-				"blaster2": {
+				"blaster2-new": {
 					"file": "blaster2.wav",
 					"probability": 0.08
 				},
-				"blaster3": {
+				"blaster3-new": {
 					"file": "blaster3.wav",
 					"probability": 0.08
 				},
-				"boomerang": {
+				"boomerang-new": {
 					"file": "boomerang-128276.wav",
 					"probability": 0.08
 				},
-				"edmlaser": {
+				"edmlaser-new": {
 					"file": "edm-laser-140951.wav",
 					"probability": 0.08
 				},
-				"heavyBeam": {
+				"heavyBeam-new": {
 					"file": "heavy-beam-weapon-7052.wav",
 					"probability": 0.08
 				},
-				"laserCannon1": {
+				"laserCannon1-new": {
 					"file": "laser-cannon-science-fiction-sound-9831-1.wav",
 					"probability": 0.08
 				},
-				"laserCannon2": {
+				"laserCannon2-new": {
 					"file": "laser-cannon-science-fiction-sound-9831-2.wav",
 					"probability": 0.08
 				},
-				"laserFalling": {
+				"laserFalling-new": {
 					"file": "laser_falling-104772.wav",
 					"probability": 0.08
 				},
-				"lasergun1": {
+				"lasergun1-new": {
 					"file": "laser-gun-72558-1.wav",
 					"probability": 0.08
 				},
-				"lasergun2": {
+				"lasergun2-new": {
 					"file": "laser-gun-72558-2.wav",
 					"probability": 0.08
 				},
-				"lasergun3": {
+				"lasergun3-new": {
 					"file": "laser-gun-81720.wav",
 					"probability": 0.08
 				},
-				"laserWhoosh": {
+				"laserWhoosh-new": {
 					"file": "laser-whoosh-37530.wav",
 					"probability": 0.08
 				},
-				"powerDown": {
+				"powerDown-new": {
 					"file": "power-down-7103.wav",
 					"probability": 0.08
 				},
-				"shoot2": {
+				"shoot2-new": {
 					"file": "shoot02wav-14562.wav",
 					"probability": 0.08
 				}
