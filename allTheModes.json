@@ -94,59 +94,71 @@
 			"maxMsToNextInstance": 100,
 			"volume": 1.0,
 			"sounds": {
-				"slinky": {
+				"slinky-new": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
-					"probability": 0.07
-				},
-				"analogLazer": {
-					"file": "analog-lazer-fx-87122.wav",
-					"probability": 0.07
-				},
-				"blasters": {
-					"file": "blasters-85815.wav",
-					"probability": 0.07
-				},
-				"boomerang": {
-					"file": "boomerang-128276.wav",
-					"probability": 0.07
-				},
-				"edmLaser": {
-					"file": "edm-laser-140951.wav",
-					"probability": 0.07
-				},
-				"heavyBeam": {
-					"file": "heavy-beam-weapon-7052.wav",
-					"probability": 0.07
-				},
-				"laserCannon": {
-					"file": "laser-cannon-science-fiction-sound-9831.wav",
-					"probability": 0.07
-				},
-				"laserFalling": {
-					"file": "laser_falling-104772.wav",
-					"probability": 0.07
-				},
-				"laserGun": {
-					"file": "laser-gun-72558.wav",
-					"probability": 0.07
-				},
-				"laserGun2": {
-					"file": "laser-gun-81720.wav",
-					"probability": 0.07
-				},
-				"whoosh": {
-					"file": "laser-whoosh-37530.wav",
-					"probability": 0.07
-				},
-				"powerDown": {
-					"file": "power-down-7103.wav",
-					"probability": 0.07
-				},
-				"robotTank": {
-					"file": "robot-tank-34600.wav",
 					"probability": 0.08
 				},
-				"shoot02": {
+				"analog-lazer-new": {
+					"file": "analog-lazer-fx-87122.wav",
+					"probability": 0.08
+				},
+				"blaster1-new": {
+					"file": "blaster1.wav",
+					"probability": 0.08
+				},
+				"blaster2-new": {
+					"file": "blaster2.wav",
+					"probability": 0.08
+				},
+				"blaster3-new": {
+					"file": "blaster3.wav",
+					"probability": 0.08
+				},
+				"boomerang-new": {
+					"file": "boomerang-128276.wav",
+					"probability": 0.08
+				},
+				"edmlaser-new": {
+					"file": "edm-laser-140951.wav",
+					"probability": 0.08
+				},
+				"heavyBeam-new": {
+					"file": "heavy-beam-weapon-7052.wav",
+					"probability": 0.08
+				},
+				"laserCannon1-new": {
+					"file": "laser-cannon-science-fiction-sound-9831-1.wav",
+					"probability": 0.08
+				},
+				"laserCannon2-new": {
+					"file": "laser-cannon-science-fiction-sound-9831-2.wav",
+					"probability": 0.08
+				},
+				"laserFalling-new": {
+					"file": "laser_falling-104772.wav",
+					"probability": 0.08
+				},
+				"lasergun1-new": {
+					"file": "laser-gun-72558-1.wav",
+					"probability": 0.08
+				},
+				"lasergun2-new": {
+					"file": "laser-gun-72558-2.wav",
+					"probability": 0.08
+				},
+				"lasergun3-new": {
+					"file": "laser-gun-81720.wav",
+					"probability": 0.08
+				},
+				"laserWhoosh-new": {
+					"file": "laser-whoosh-37530.wav",
+					"probability": 0.08
+				},
+				"powerDown-new": {
+					"file": "power-down-7103.wav",
+					"probability": 0.08
+				},
+				"shoot2-new": {
 					"file": "shoot02wav-14562.wav",
 					"probability": 0.08
 				}
