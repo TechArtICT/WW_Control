@@ -96,57 +96,69 @@
 			"sounds": {
 				"slinky": {
 					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"analogLazer": {
+				"analog-lazer": {
 					"file": "analog-lazer-fx-87122.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"blasters": {
-					"file": "blasters-85815.wav",
-					"probability": 0.07
+				"blaster1": {
+					"file": "blaster1.wav",
+					"probability": 0.08
+				},
+				"blaster2": {
+					"file": "blaster2.wav",
+					"probability": 0.08
+				},
+				"blaster3": {
+					"file": "blaster3.wav",
+					"probability": 0.08
 				},
 				"boomerang": {
 					"file": "boomerang-128276.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"edmLaser": {
+				"edmlaser": {
 					"file": "edm-laser-140951.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
 				"heavyBeam": {
 					"file": "heavy-beam-weapon-7052.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"laserCannon": {
-					"file": "laser-cannon-science-fiction-sound-9831.wav",
-					"probability": 0.07
+				"laserCannon1": {
+					"file": "laser-cannon-science-fiction-sound-9831-1.wav",
+					"probability": 0.08
+				},
+				"laserCannon2": {
+					"file": "laser-cannon-science-fiction-sound-9831-2.wav",
+					"probability": 0.08
 				},
 				"laserFalling": {
 					"file": "laser_falling-104772.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"laserGun": {
-					"file": "laser-gun-72558.wav",
-					"probability": 0.07
+				"lasergun1": {
+					"file": "laser-gun-72558-1.wav",
+					"probability": 0.08
 				},
-				"laserGun2": {
+				"lasergun2": {
+					"file": "laser-gun-72558-2.wav",
+					"probability": 0.08
+				},
+				"lasergun3": {
 					"file": "laser-gun-81720.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
-				"whoosh": {
+				"laserWhoosh": {
 					"file": "laser-whoosh-37530.wav",
-					"probability": 0.07
+					"probability": 0.08
 				},
 				"powerDown": {
 					"file": "power-down-7103.wav",
-					"probability": 0.07
-				},
-				"robotTank": {
-					"file": "robot-tank-34600.wav",
 					"probability": 0.08
 				},
-				"shoot02": {
+				"shoot2": {
 					"file": "shoot02wav-14562.wav",
 					"probability": 0.08
 				}
