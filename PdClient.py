@@ -49,6 +49,12 @@ class PdClient(Protocol):
                 + int(time.time() * 1000),
             )
 
+    def givePdTheMode(self):
+        theMode = sharedData.modes[sharedData.mode]["mode"]
+        stringToSend = "mode " + theMode + ";\n"
+        print("stringToSend: ", stringToSend)
+        self.transport.write(stringToSend.encode("ascii"))
+
     def dataReceived(self, data):
         # need to parse data here. There could be more than one message
         # x = f'{self.quote}  {str(data[:-1])}'
@@ -61,6 +67,9 @@ class PdClient(Protocol):
             if z == b"got anything?":
                 self.givePdSomethingToDo()
                 print("yes")
+            elif z== b"where are we?":
+                print("finding ourselves")
+                self.givePdTheMode()
             else:
                 self.transport.write("nope".encode("ascii"))
 
