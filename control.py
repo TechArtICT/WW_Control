@@ -80,7 +80,10 @@ if __name__ == "__main__":
 
     for i in range(sharedData.numPdInstances):
         port = 3000 + sharedData.activeTrees[i]
-        reactor.connectTCP("localhost", port, PdClientFactory(i))
+        if i != 18:
+            reactor.connectTCP("localhost", port, PdClientFactory(i))
+        else:
+            reactor.connectTCP("10.42.0.18", port, PdClientFactory(i))
     loop = task.LoopingCall(runEverySecond)
     loopDeferred = loop.start(1.0)
     loopDeferred.addErrback(ebLoopFailed)
