@@ -52,7 +52,7 @@ for i in ${activeTrees[@]}; do
         fi
     fi
     if [ "$test" != "true" ]; then
-        ./monitor.sh $i $zyport
+        ./monitor.sh $i $zyport &
     fi
 done
 
