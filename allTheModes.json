@@ -257,34 +257,6 @@
 					"probability": 0.04
 				}
 			}
-		},
-		{
-			"mode": "spaceLaserTest",
-			"minInstances": 20,
-			"maxInstances": 25,
-			"minMsToNextInstance": 50,
-			"maxMsToNextInstance": 100,
-			"volume": 1.0,
-			"sounds": {
-				"slinky": {
-					"file": "011113_slinky-quotpewquot-laser-sound-59279.wav",
-					"probability": 1
-				}
-			}
-		},
-	  	{
-		"mode": "robotTankTest",
-			"minInstances": 25,
-			"maxInstances": 25,
-			"minMsToNextInstance": 1,
-			"maxMsToNextInstance": 1,
-			"volume": 1.0,
-			"sounds": {
-				"robotTank": {
-                                        "file": "robot-tank-34600.wav",
-					"probability": 1
-				}
-			}
 		}
 
 	]
