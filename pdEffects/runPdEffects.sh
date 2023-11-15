@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+amixer -c 0 -- sset Mic Capture 100%
 cd /home/glog/Desktop/WW_Control/pdEffects
 echo glog | sudo -S alsa force-reload
 if [ "X$(aplay -l | grep "card 0" | grep USB)" == "X" ]; then
